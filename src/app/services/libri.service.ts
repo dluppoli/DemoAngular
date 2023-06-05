@@ -5,8 +5,8 @@ import { Libro } from "../model/libro";
 export class LibriService
 {
     private libri: Libro[] = [
-        new Libro('I promessi sposi','Alessandro Manzoni',20,'promessisposi.png'),
-        new Libro('La divina commedia','Dante Alighieri',12,'divinacommedia.png')
+        new Libro('I promessi sposi','Alessandro Manzoni',20,'promessisposi.jpg'),
+        new Libro('La divina commedia','Dante Alighieri',12,'divinacommedia.jpg')
     ]
 
     getAll() : Libro[]
