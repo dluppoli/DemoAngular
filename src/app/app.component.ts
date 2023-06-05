@@ -20,12 +20,11 @@ export class AppComponent {
 
   cerca():void
   {
-    this.libri = [];
+    this.libri = this.libriService.find(this.stringaRicerca);
   }
 
   pulisci() : void
   {
-    console.dir(this.stringaRicerca);
     this.stringaRicerca = '';
     this.cerca();
   }
