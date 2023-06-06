@@ -11,22 +11,14 @@ export class AppComponent {
   title = 'Libreria Biblioteca';
 
   libri : Libro[];
-  stringaRicerca:string = '';
-
+ 
   constructor(private libriService:LibriService)
   {
     this.libri = libriService.getAll();
   }
-
-  cerca():void
-  {
-    this.libri = this.libriService.find(this.stringaRicerca);
-  }
-
-  pulisci() : void
-  {
-    this.stringaRicerca = '';
-    this.cerca();
-  }
   
+  cerca(valore:string):void
+  {
+    this.libri = this.libriService.find(valore);
+  }
 }
