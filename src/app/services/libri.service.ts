@@ -5,8 +5,8 @@ import { Libro } from "../model/libro";
 export class LibriService
 {
     private libri: Libro[] = [
-        new Libro('I promessi sposi','Alessandro Manzoni',20,'promessisposi.jpg'),
-        new Libro('La divina commedia','Dante Alighieri',12,'divinacommedia.jpg')
+        new Libro(1,'I promessi sposi','Alessandro Manzoni',20,'promessisposi.jpg'),
+        new Libro(2,'La divina commedia','Dante Alighieri',12,'divinacommedia.jpg')
     ]
 
     getAll() : Libro[]
@@ -29,5 +29,10 @@ export class LibriService
 
         return this.libri.filter( l => l.titolo.includes(stringaRicerca) || 
             l.autore.includes(stringaRicerca))
+    }
+
+    getOne(id:number) : Libro | undefined
+    {
+        return this.libri.find(l => l.id == id);
     }
 }

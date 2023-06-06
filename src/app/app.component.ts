@@ -8,17 +8,5 @@ import { LibriService } from './services/libri.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Libreria Biblioteca';
 
-  libri : Libro[];
- 
-  constructor(private libriService:LibriService)
-  {
-    this.libri = libriService.getAll();
-  }
-  
-  cerca(valore:string):void
-  {
-    this.libri = this.libriService.find(valore);
-  }
 }
