@@ -13,6 +13,7 @@ import { ElencoLibriComponent } from './components/elenco-libri/elenco-libri.com
 import { AboutComponent } from './components/about/about.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { DettaglioLibroComponent } from './components/dettaglio-libro/dettaglio-libro.component';
+import { HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { DettaglioLibroComponent } from './components/dettaglio-libro/dettaglio-
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [LibriService],
   bootstrap: [AppComponent]

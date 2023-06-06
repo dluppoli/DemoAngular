@@ -17,6 +17,6 @@ export class DettaglioLibroComponent {
   {
     this.id = +this.routeService.snapshot.params['id'];
 
-    if( !isNaN(this.id) ) this.libro = libriService.getOne(this.id);
+    if( !isNaN(this.id) ) libriService.getOne(this.id).subscribe(r=>this.libro = r);
   }
 }
