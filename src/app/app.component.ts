@@ -14,11 +14,4 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'DemoAngular';
-
-  libri : Book[];
-
-  constructor(private booksService:BooksService){
-     this.libri = this.booksService.getBooks();
-  }
 }
