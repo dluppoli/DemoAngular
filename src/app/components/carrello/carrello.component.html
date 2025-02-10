@@ -12,7 +12,7 @@
         <tr *ngFor="let libro of carrello">
             <td>{{ libro.title }}</td>
             <td>{{ libro.author }}</td>
-            <td>  <a class="text-danger" (click)="carrelloService.remove(libro)">Elimina</a>  </td>
+            <td>  <a class="text-danger" (click)="elimina(libro)">Elimina</a>  </td>
         </tr>
     </tbody>
 </table>

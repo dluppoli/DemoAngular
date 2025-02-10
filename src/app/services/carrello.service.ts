@@ -26,4 +26,8 @@ export class CarrelloService {
   remove(book:Book) {
     this.carrello = this.carrello.filter(b => b.isbn !== book.isbn);
   }
+
+  get count():number {
+    return this.carrello.length;
+  }
 }

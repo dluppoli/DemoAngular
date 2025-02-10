@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { CarrelloService } from '../../services/carrello.service';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +10,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  constructor(public carrelloService:CarrelloService) { 
+  }
 }

@@ -16,4 +16,10 @@ export class CarrelloComponent {
   constructor(public carrelloService:CarrelloService) { 
     this.carrello = this.carrelloService.getAll();
   }
+
+  elimina(libro:Book)
+  {
+    this.carrelloService.remove(libro);
+    this.carrello = this.carrelloService.getAll();
+  }
 }
