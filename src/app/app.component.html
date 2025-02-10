@@ -2,12 +2,15 @@
 <H1>{{title}}</H1>
 
 <div class="d-flex flex-wrap justify-content-around">
-    <div class="card book">
-        <img class="card-img-top" src="https://covers.openlibrary.org/b/isbn/{{libro1.isbn}}-L.jpg" alt="Card image cap">
+    <div *ngFor="let libro of libri" class="card book">
+        <!--<img class="card-img-top" src="https://covers.openlibrary.org/b/isbn/{{libro.isbn}}-L.jpg" alt="Card image cap">-->
+        <img class="card-img-top" [src]=" 'https://covers.openlibrary.org/b/isbn/'+libro.isbn+'-L.jpg' " alt="Card image cap">
         <div class="card-body">
-            <h4 class="card-title">{{libro1.title}}</h4>
-            <h5 class="card-title">{{libro1.author}}</h5>
-            <p class="card-text">{{libro1.description}}</p>
+            <h4 class="card-title">{{libro.title}}</h4>
+            <h5 class="card-title">{{libro.author.toUpperCase()}}</h5>
+            <p class="card-text">{{libro.description}}</p>
+            <!--<p *ngIf="libro.newBook==true" class="text-end text-danger">Novità</p>-->
+            <p class="text-end text-danger" [class.d-none]=" !libro.newBook  " >Novità</p>
         </div>
     </div>
 </div>
