@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './book.component.css'
 })
 export class BookComponent {
-  constructor(private booksService: BooksService, private router: ActivatedRoute) {
-    console.log(this.router.snapshot.params['isbn']);
+  constructor(private booksService: BooksService, private route: ActivatedRoute) {
+    console.log(this.route.snapshot.params['isbn']);
   }
 }
