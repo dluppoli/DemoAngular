@@ -1,9 +1,15 @@
 <app-header></app-header>
 <H1>{{title}}</H1>
 
-<h2>{{libro1.title}}</h2>
-<h3>{{libro1.author}}</h3>
-<p>{{libro1.description}}</p>
-<img src="https://covers.openlibrary.org/b/isbn/{{libro1.isbn}}-L.jpg">
+<div class="d-flex flex-wrap justify-content-around">
+    <div class="card book">
+        <img class="card-img-top" src="https://covers.openlibrary.org/b/isbn/{{libro1.isbn}}-L.jpg" alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">{{libro1.title}}</h4>
+            <h5 class="card-title">{{libro1.author}}</h5>
+            <p class="card-text">{{libro1.description}}</p>
+        </div>
+    </div>
+</div>
 
 <app-footer></app-footer>
