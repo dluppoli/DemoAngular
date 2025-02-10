@@ -127,4 +127,8 @@ export class BooksService {
   getBooks(): Book[] {
     return this._books;
   }
+
+  getOneBook(isbn: string): Book | undefined {
+    return this._books.find(book => book.isbn === isbn);
+  }
 }
