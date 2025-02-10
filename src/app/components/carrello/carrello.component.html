@@ -1,0 +1,18 @@
+<h1>Carrello</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titolo</th>
+            <th>Autore</th>
+            <th>Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let libro of carrello">
+            <td>{{ libro.title }}</td>
+            <td>{{ libro.author }}</td>
+            <td>  <a class="text-danger" (click)="carrelloService.remove(libro)">Elimina</a>  </td>
+        </tr>
+    </tbody>
+</table>

@@ -3,7 +3,7 @@
 <div class="d-flex flex-wrap justify-content-around">
     <div *ngFor="let libro of libri" class="card book">
         <!--<img class="card-img-top" src="https://covers.openlibrary.org/b/isbn/{{libro.isbn}}-L.jpg" alt="Card image cap">-->
-        <a href="isbn/{{libro.isbn}}">
+        <a routerLink="isbn/{{libro.isbn}}">
             <img class="card-img-top" [src]=" 'https://covers.openlibrary.org/b/isbn/'+libro.isbn+'-L.jpg' " alt="Card image cap">
         </a>
         <div class="card-body">

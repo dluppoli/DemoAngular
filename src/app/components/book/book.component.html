@@ -8,6 +8,7 @@
             <p class="card-text">{{libro.description}}</p>
             <!--<p *ngIf="libro.newBook==true" class="text-end text-danger">Novità</p>-->
             <p class="text-end text-danger" [class.d-none]=" !libro.newBook  " >Novità</p>
+            <button class="btn btn-primary" (click)="carrelloService.add(libro)" >Aggiungi al carrello</button>
         </div>
     </div>
 </div>
