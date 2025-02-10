@@ -1,1 +1,16 @@
-<p>book works!</p>
+<div *ngIf="libro!=undefined">
+    <div class="card book">
+        <!--<img class="card-img-top" src="https://covers.openlibrary.org/b/isbn/{{libro.isbn}}-L.jpg" alt="Card image cap">-->
+        <img class="card-img-top" [src]=" 'https://covers.openlibrary.org/b/isbn/'+libro.isbn+'-L.jpg' " alt="Card image cap">
+        <div class="card-body">
+            <h4 class="card-title">{{libro.title}}</h4>
+            <h5 class="card-title">{{libro.author.toUpperCase()}}</h5>
+            <p class="card-text">{{libro.description}}</p>
+            <!--<p *ngIf="libro.newBook==true" class="text-end text-danger">Novità</p>-->
+            <p class="text-end text-danger" [class.d-none]=" !libro.newBook  " >Novità</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="libro==undefined">
+    <h2>Libro non trovato</h2>
+</div>
