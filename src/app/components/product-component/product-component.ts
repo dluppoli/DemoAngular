@@ -24,4 +24,10 @@ export class ProductComponent {
     })
     
   }
+
+  acquista()
+  {
+    if( this.product != undefined )
+      this.shopService.addCarrello(this.product)  
+  }
 }

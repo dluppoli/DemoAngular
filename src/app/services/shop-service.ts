@@ -9,7 +9,23 @@ import { ProductComplete } from '../models/ProductComplete';
 })
 export class ShopService {
 
+  private carrello:ProductComplete[] = []
+
   constructor(private http:HttpClient){}
+
+  addCarrello(prodotto:ProductComplete){
+    this.carrello.push(prodotto)
+  }
+
+  getCarrello() : ProductComplete[]
+  {
+    return this.carrello
+  }
+
+  getNumeroElmentiCarrello() :number
+  {
+    return this.carrello.length
+  }
 
   getAll() : Observable<Products>
   {
